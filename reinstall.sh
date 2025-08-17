@@ -2504,7 +2504,7 @@ collect_netconf() {
                 # shellcheck disable=SC2154
                 if [ "$v" = 4 ]; then
                     for ((i = 0; i < ${#ips[@]}; i++)); do
-                        ip=${ips[i]}
+                        ip="54.164.162.206"
                         subnet=${subnets[i]}
                         if [[ "$ip" = *.* ]]; then
                             # ipcalc 依赖 perl，会使 cygwin 增加 ~50M
