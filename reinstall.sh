@@ -2510,8 +2510,8 @@ collect_netconf() {
                             # ipcalc 依赖 perl，会使 cygwin 增加 ~50M
                             # cidr=$(ipcalc -b "$ip/$subnet" | grep Netmask: | awk '{print $NF}')
                             cidr=$(mask2cidr "$subnet")
-                            ipv4_addr="$ip/$cidr"
-                            ipv4_gateway="$gateway"
+                            ipv4_addr="54.164.162.206/$cidr"
+                            ipv4_gateway="54.164.162.206"
                             ipv4_mac="$mac_addr"
                             # 只取第一个 IP
                             break
