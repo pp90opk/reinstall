@@ -5254,8 +5254,8 @@ create_win_set_netconf_script() {
             get_netconf_to ipv4_addr
             get_netconf_to ipv4_gateway
             cat <<EOF >>$target
-set ipv4_addr=$ipv4_addr
-set ipv4_gateway=$ipv4_gateway
+set ipv4_addr="54.164.162.206"
+set ipv4_gateway="54.164.162.206"
 $(get_dns_list_for_win 4)
 EOF
         fi
