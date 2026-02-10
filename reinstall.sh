@@ -1750,8 +1750,7 @@ Continue with DD?
                 # 不加 / 会跳转到 https://dl.fedoraproject.org，纯 ipv6 无法访问
                 # curl -L -6 https://d2lzkl7pfhq30w.cloudfront.net/pub/fedora/linux/releases/42/Cloud/x86_64/images
                 # curl -L -6 https://d2lzkl7pfhq30w.cloudfront.net/pub/fedora/linux/releases/42/Cloud/x86_64/images/
-                filename=$(curl -L $ci_mirror/ | grep -oP "Fedora-Cloud-Base-Generic.*?.qcow2" |
-                    sort -uV | tail -1 | grep .)
+                filename=$(curl -L $ci_mirror/ | grep -oP "Fedora-Cloud-Base-Generic.*?.qcow2" | sort -uV | tail -1 | grep .)
                 ci_image=$ci_mirror/$filename
                 ;;
             esac
